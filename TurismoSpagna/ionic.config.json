@@ -1,0 +1,7 @@
+{
+  "name": "TurismoSpagna",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
