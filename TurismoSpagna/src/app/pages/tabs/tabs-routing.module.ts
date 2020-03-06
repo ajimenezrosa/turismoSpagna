@@ -33,13 +33,14 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+              // import('../pages/tab3/tab3.module').then(m => m.Tab3PageModule)
+              import( '../tab3/tab3.module').then(m => m.Tab3PageModule)
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/pages/tabs/tab1',
         pathMatch: 'full'
       }
     ]
