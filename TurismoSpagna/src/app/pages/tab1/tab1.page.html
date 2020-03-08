@@ -7,23 +7,25 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card>
+
+
+  <ion-card *ngFor="let item of Resultado">
     <ion-card-header>
-      <ion-card-subtitle>PLAZA VILLA 5</ion-card-subtitle>
-      <ion-card-title>10 años de jazz: Jazz Band</ion-card-title>
+      <ion-card-subtitle>Evento</ion-card-subtitle>
+      <ion-card-title>{{item.title}}</ion-card-title>
     </ion-card-header>
   
     <ion-card-content>
   
       <ion-card-content>
-        A las 19 horas y en las fechas abajo indicadas. 
+        <!-- {{item.location.latitude }} [/] {{item.location.longitude }} -->
       </ion-card-content>
     </ion-card-content>
     
     <ion-card>
       <ion-item>
         <ion-icon name="location" slot="start"></ion-icon>
-        <ion-label>Centro Cultural Fernando Lázaro Carreter (Carabanchel)</ion-label>
+        <ion-label> {{item.location.latitude }} [/] {{item.location.longitude }}</ion-label>
         <ion-button fill="outline" slot="end">View</ion-button>
       </ion-item>
     
@@ -34,29 +36,7 @@
 
   <!-- fin de cards___ -->
   
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>PLAZA VILLA 5</ion-card-subtitle>
-      <ion-card-title>10 años de jazz: Jazz Band</ion-card-title>
-    </ion-card-header>
-  
-    <ion-card-content>
-  
-      <ion-card-content>
-        A las 19 horas y en las fechas abajo indicadas. 
-      </ion-card-content>
-    </ion-card-content>
-  
-    <ion-card>
-      <ion-item>
-        <ion-icon name="location" slot="start"></ion-icon>
-        <ion-label>Centro Cultural Fernando Lázaro Carreter (Carabanchel)</ion-label>
-        <ion-button fill="outline" slot="end">View</ion-button>
-      </ion-item>
-    
-    </ion-card>
-  
-  </ion-card>
+
   
 
   <!-- fin de cards___ -->

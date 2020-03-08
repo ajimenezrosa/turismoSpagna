@@ -10,16 +10,30 @@ import { ActividadCulturalService } from '../../sevices/actividad-cultural.servi
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page implements OnInit  {
-
-
+  actividades: RootObject[];
+  Resultado: Graph[];
+  todos: Graph[];
   constructor(private actividadesCulturales: ActividadCulturalService) {}
 
 
 ngOnInit() {
-  this.actividadesCulturales.getActividades()
-        .subscribe( resp => {
-            console.log( 'Actividades', resp );
-        });
+        this.cargarnotificaciones();
+ }
+
+
+ cargarnotificaciones() {
+ this.actividadesCulturales.getActividades()
+  .subscribe( resp => {
+    this.Resultado = resp['@graph'];
+        // console.log(this.todos);
+
+  });
+
+
+
+   // console.log(this.Resultado);
 }
+
+
 
 }
